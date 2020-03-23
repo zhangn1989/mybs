@@ -53,7 +53,6 @@ void Server::onReadyRead()
 		while (!file.atEnd())
 		{
 			MYBSProtocol *mp = nullptr;
-			memset(&mp, 0, sizeof(mp));
 			// 处理中文乱码
 			QString line = QString::fromLocal8Bit(file.readLine());
 			QString key = line.left(line.indexOf(':'));
