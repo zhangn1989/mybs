@@ -7,6 +7,9 @@
 message("You are running qmake on a generated .pro file. This may not work!")
 
 
-TEMPLATE = subdirs
-SUBDIRS += source/browser/browser.pro \
-    source/server/server.pro
+HEADERS += ./mainwindow.h \
+    ./BrowseArea.h
+SOURCES += ./BrowseArea.cpp \
+    ./main.cpp \
+    ./mainwindow.cpp
+FORMS += ./mainwindow.ui
